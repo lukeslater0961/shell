@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "info.h"
 
 char *ft_strcat(char *username, char *src)
