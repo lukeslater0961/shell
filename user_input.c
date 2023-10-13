@@ -1,6 +1,6 @@
 #include "info.h"
 
-void user_input(char *Buffer, char username[10]) 
+void user_input(char Buffer[100], char username[10]) 
 {
     char *commands[] = {"↳ cat + (name of file in directory)", NULL}; 
 

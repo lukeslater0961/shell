@@ -3,7 +3,7 @@ PROG_NAME = shell
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g 
 
-SRCS = main.c user_input.c ft_functions.c loop.c 
+SRCS = main.c user_input.c ft_functions.c loop.c ft_cat.c
 OBJS = $(SRCS:.c=.o)
 
 $(PROG_NAME): $(OBJS)

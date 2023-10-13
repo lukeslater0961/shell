@@ -1,8 +1,8 @@
 #include "info.h"
 
-void ft_cat(char *Buffer, char username[10])
+void ft_cat(char Buffer[100], char username[10])
 {
-    char *filename;
+    char filename[10];
     int i = 4;
     int j = 0;
     if(Buffer[i] == '-')
@@ -11,12 +11,13 @@ void ft_cat(char *Buffer, char username[10])
     }
     else if(Buffer[i - 1] != ' ')
     {
-        write(1, "command error\n", 15);
+        if(Buffer[i - 1] == '\n')
+        write(1, "specify what you wish to do with cat \n", 39);
         loop(username);
     }
     else if((Buffer[i] >= 'a' && Buffer[i] <= 'z') || (Buffer[i] >= 'A' && Buffer[i] <= 'Z'))
     {
-        while(i != strlen(Buffer))
+        while(Buffer[i] != '\0')
         {
             filename[j] = Buffer[i];
             i++;
@@ -24,10 +25,10 @@ void ft_cat(char *Buffer, char username[10])
         }
         filename[j] = '\0';
         write(1, filename, strlen(filename)); //debug for filename
-        openfile(filename);
+        //openfile(filename);
     }
 }
 
-void openfile(char *filename) {
+/*void openfile(char *filename) {
     
-}
+}*/
