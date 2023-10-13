@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 extern char Buffer;
 extern char username;
@@ -16,5 +17,7 @@ void user_input();
 void loop();
 int	ft_strncmp();
 void ft_cat();
+unsigned int	ft_strlcat();
+void openfile();
 
 #endif

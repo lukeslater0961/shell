@@ -13,7 +13,10 @@ void user_input(char *Buffer, char username[10])
         }
     }
     else if(ft_strncmp(Buffer, "cat\n") == 0){
-        ft_cat(Buffer);
+        ft_cat(Buffer, username);
     }
+    /*else if(ft_strncmp(Buffer, "echo\n") == 0){
+        ft_echo(Buffer);                                       //echo command to be implemented later on.........
+    }*/
     loop(username);
 }
