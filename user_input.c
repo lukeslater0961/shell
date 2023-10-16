@@ -15,8 +15,14 @@ void user_input(char Buffer[100], char username[10])
     else if(ft_strncmp(Buffer, "cat\n") == 0){
         ft_cat(Buffer, username);
     }
-    /*else if(ft_strncmp(Buffer, "echo\n") == 0){
-        ft_echo(Buffer);                                       //echo command to be implemented later on.........
-    }*/
+    else if(ft_strncmp(Buffer, "echo\n") == 0){
+        ft_echo(Buffer, username);
+    }
+    else{
+        write(1, "command not found:\t", 18);
+        write(1, Buffer, strlen(Buffer));
+        loop(username);
+    }
+    
     loop(username);
 }

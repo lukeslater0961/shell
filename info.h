@@ -19,5 +19,6 @@ int	ft_strncmp();
 void ft_cat();
 unsigned int	ft_strlcat();
 void openfile();
+void ft_echo();
 
 #endif
