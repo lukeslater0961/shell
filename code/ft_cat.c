@@ -9,7 +9,7 @@ void ft_cat(char Buffer[100], char username[10])
     {
         write(1, "special\n", 9); // will work on later (-e , -A etc etc)
     }
-    else if(Buffer[i - 1] != ' ' || Buffer[i - 1] == '\n' || (Buffer[i-1] >= 'a' && Buffer[i-1] <= 'z') || (Buffer[i-1] >= 'A' && Buffer[i-1] <= 'Z') || Buffer[i - 1] == '-')
+    else if(Buffer[i - 1] != ' ' || Buffer[i - 1] == '\n' || (Buffer[i-1] >= 'a' && Buffer[i-1] <= 'z') || (Buffer[i-1] >= 'A' && Buffer[i-1] <= 'Z') || Buffer[i - 1] == '-' || Buffer[i] == '\n')
     {
         write(1, "specify what you wish to do with cat \n", 39);
         loop(username);
@@ -22,20 +22,22 @@ void ft_cat(char Buffer[100], char username[10])
             i++;
             j++;
         }
+        filename[j] = '\0';
         openfile(filename);
         write(1, "__________________________________\n", 35);
     }
 }
 
-void openfile(char *filename)
+char openfile(char *filename)
 {
     FILE* ptr;
     int ch;
  
     ptr = fopen(filename, "r");
  
-    if (NULL == ptr) {
+    if (ptr == NULL) {
         write(1, "file can't be opened \n", 23);
+        return -1;
     }
     write(1, "__________________________________\n", 35);
     ch = fgetc(ptr);
@@ -44,5 +46,7 @@ void openfile(char *filename)
         ch = fgetc(ptr);
         
     } 
-    fclose(ptr);
+   write(1, "\n", 2);
+    fclose(ptr); 
+    return 0;
 }

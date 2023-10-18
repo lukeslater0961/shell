@@ -1,0 +1,19 @@
+ ________  ________  _________   
+|\   ____\|\   __  \|\___   ___\ 
+\ \  \___|\ \  \|\  \|___ \  \_| 
+ \ \  \    \ \   __  \   \ \  \  
+  \ \  \____\ \  \ \  \   \ \  \ 
+   \ \_______\ \__\ \__\   \ \__\
+    \|_______|\|__|\|__|    \|__|
+                                 
+                                 
+Possible commands (current):
+
+↳cat + (filename) : reads and shows all content in any file (.txt / .c / .h etc ect ).
+
+Future commands :
+
+↳ cat -e : reads all files in current directory and shows all the content.
+
+
+@luke_slater

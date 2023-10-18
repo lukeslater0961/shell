@@ -15,10 +15,12 @@ char *ft_strcat();
 int ft_strcmp();
 void user_input();
 void loop();
-int	ft_strncmp();
 void ft_cat();
 unsigned int	ft_strlcat();
-void openfile();
+char openfile();
 void ft_echo();
+void ft_exit();
+void ft_help();
+int ft_date();
 
 #endif
