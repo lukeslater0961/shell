@@ -32,9 +32,9 @@ char openfile(char *filename)
 {
     FILE* ptr;
     int ch;
- 
+
     ptr = fopen(filename, "r");
- 
+
     if (ptr == NULL) {
         write(1, "file can't be opened \n", 23);
         return -1;
@@ -44,9 +44,8 @@ char openfile(char *filename)
     while (ch != EOF){
         write(1, &ch, 1);
         ch = fgetc(ptr);
-        
-    } 
+    }
    write(1, "\n", 2);
-    fclose(ptr); 
+    fclose(ptr);
     return 0;
 }

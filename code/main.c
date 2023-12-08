@@ -11,6 +11,9 @@ int main()
     if (username_length > 0 && username[username_length - 1] == '\n') {
         username[username_length - 1] = '\0';
     }
+    printf("\n[...]Launching shell[...]\n\n");
+    loading_animation();
     ft_strlcat(username, ">> ", strlen(username) + 3);
     loop(username);
 }
+

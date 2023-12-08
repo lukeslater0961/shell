@@ -36,3 +36,16 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (res);
 }
+
+void loading_animation() {
+    const char animation[] = "|/-\\";
+    const int num_frames = sizeof(animation) - 1;
+
+    for (int i = 0; i < 20; ++i) {
+        printf("\rLoading [%c]", animation[i % num_frames]); //prints the line whilst overwriting the previous one with the \r
+        fflush(stdout);
+        usleep(100000);
+    }
+	printf("\rSHELL successfully launched!\n");
+	fflush(stdout);
+}

@@ -8,5 +8,6 @@ void ft_exit(char Buffer[100], char username[10])
         Buffer[i] = '\0';
         username[i] = '\0';
     }
+    printf("[Shell successfully exited !]");
     exit(0);
 }

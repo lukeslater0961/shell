@@ -3,7 +3,7 @@
 void user_input(char Buffer[100], char username[10]) 
 {
     if (strncmp(Buffer, "help", 4) == 0) {
-        ft_help(Buffer);
+        ft_help(Buffer, username);
     }
     else if(strncmp(Buffer, "cat", 3) == 0){
         ft_cat(Buffer, username);
@@ -11,7 +11,7 @@ void user_input(char Buffer[100], char username[10])
     else if(strncmp(Buffer, "echo", 4) == 0){
         ft_echo(Buffer, username);
     }
-    else if(ft_strcmp(Buffer, "exit\n") == 0){
+    else if(strncmp(Buffer, "exit", 4) == 0){
         ft_exit(Buffer, username);
     }
     else if(strncmp(Buffer, "date", 4) == 0){
@@ -22,6 +22,5 @@ void user_input(char Buffer[100], char username[10])
         write(1, Buffer, strlen(Buffer));
         loop(username);
     }
-    
     loop(username);
 }
